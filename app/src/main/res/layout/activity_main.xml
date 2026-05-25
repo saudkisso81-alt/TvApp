@@ -2,47 +2,187 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
 
     <LinearLayout
+        android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="0dp"
+        android:background="#FFFFFF">
 
         <androidx.media3.ui.PlayerView
             android:id="@+id/playerView"
             android:layout_width="match_parent"
-            android:layout_height="330dp"
+            android:layout_height="299dp"
             app:use_controller="true" />
 
         <ListView
             android:id="@+id/listChannels"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="194dp"
             android:layout_marginTop="10dp"
             android:layout_weight="1" />
 
+        <!-- Row 1: Navigation & Channel Entry -->
         <LinearLayout
+            android:id="@+id/row1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/btnPrev10"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Prev 10"
+                android:textSize="10sp" />
 
             <Button
                 android:id="@+id/btnPrev"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
-                android:text="Previous Channel" />
+                android:text="Prev"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/etChannelNumber"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:textColor="@android:color/black"
+                android:background="@android:drawable/edit_text"
+                android:padding="10sp"
+                android:gravity="center" />
 
             <Button
                 android:id="@+id/btnNext"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
-                android:text="Next Channel" />
+                android:text="Next"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btnNext10"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Next 10"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <!-- Row 2: Moving Channels -->
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/btnMovePrev10"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="M. Prev 10"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btnMovePrev"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Move Prev"
+                android:textSize="10sp" />
+
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Save"
+                android:textSize="10sp" />
+
+
+            <Button
+                android:id="@+id/btnMoveNext"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Move Next"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btnMoveNext10"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="M. Next 10"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Delete"
+                android:backgroundTint="#FF0000"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btnUndoDelete"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Undo"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btnFullScreen"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Full"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btnRecall"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Recall"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Update"
+                android:textSize="10sp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF" />
 
         </LinearLayout>
+
 
     </LinearLayout>
 
