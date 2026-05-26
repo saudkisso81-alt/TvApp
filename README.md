@@ -43,7 +43,7 @@ The Privacy Policy for this application can be found [here](privacy-policy.md).
 
 ## 📩 Contact
 Developed by: **Saud Kisso**
-Email: [saudkisso81@gmail.com](mailto:saudkisso81@gmail.com)
+Email: [saudgeeso@gmail.com](mailto:saudgeeso@gmail.com)
 
 ---
 *Disclaimer: This app is a media player only and does not provide any built-in content. Users must provide their own M3U playlists.*
